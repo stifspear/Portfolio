@@ -35,7 +35,7 @@
     text-transform: uppercase;
 }
 .abt-me-desc {
-    width: 400px;
+    width: 550px;
     text-align: center;
 }
 .cont-img {
@@ -85,4 +85,12 @@
 .cont-header > span::after {
     left: 100%;
     margin-left: 15px;
+}
+@media screen and (max-width: 600px) {
+    .name-cls {
+        font-size: 20px;
+    }
+    .abt-me-desc {
+        width: 400px;
+    }
 }
