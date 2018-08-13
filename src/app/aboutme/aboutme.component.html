@@ -5,7 +5,8 @@
             <p class="name-cls">Stif Spear Subba</p>
             <p class="abt-me-desc">Software Developer</p>
         </div>
-        <div class="prof-img-wr img-div"></div>
+        <div class="prof-img-wr img-div">
+        </div>
         <p class="abt-me-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
             aliqua. Ut enim ad minim veniam, quis nostrud exercitatio</p>
     </div>
@@ -28,23 +29,32 @@
             </div>
         </div>
     </div>
-    <div class="trio-cont flex-col">
-        <div class="left-cont flex-row">
-            <div class="edu-cont flex-row">
-                <p class="edu-ele">College Name Some I read</p>
-                <p class="edu-ele">College Name Some I read</p>
-                <p class="edu-ele">College Name Some I read</p>
-            </div>
-            <div class="exp-cont flex-row">
-            </div>
+    <div class="edu-exp-cont flex-row">
+        <div class="edu-exp-incont flex-col">
+            <header>Education</header>
+            <p class="edu-ele">College Name Some I read</p>
+            <p class="edu-ele">College Name Some I read</p>
+            <p class="edu-ele">College Name Some I read</p>
         </div>
-        <div class="skills-cont flex-row">
-            <p class="skill-ele">Java</p>
-            <p class="skill-ele">Java</p>
-            <p class="skill-ele">Java</p>
-            <p class="skill-ele">Java</p>
-            <p class="skill-ele">Java</p>
-            <p class="skill-ele">Java</p>
+        <div class="edu-exp-incont flex-col">
+            <header>Skills</header>
+            <p class="edu-ele">Skill 1</p>
+            <p class="edu-ele">Skill 2</p>
+            <p class="edu-ele">skill 3</p>
         </div>
     </div>
+    <div *ngFor="let section of getKeys(dataObj)">
+        <header class="header">{{section}}</header>
+        <div class="flex-row">
+            <div class="item-cont flex-col">
+                <div class="item-ele" *ngFor="let value of getKeys(dataObj[section])" (click)="updateDesc(section, value)">
+                    {{value}}
+                </div>
+            </div>
+            <p class="item-desc">
+                {{dataObj[section][selectedValues[section]]}}
+            </p>
+        </div>
+    </div>
+
 </div>

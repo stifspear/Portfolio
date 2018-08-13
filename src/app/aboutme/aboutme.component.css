@@ -7,7 +7,6 @@
 }
 
 .aboutme-cont {
-    position: relative;
 }
 .banner {
     width: 100%;
@@ -21,11 +20,12 @@
     justify-content: space-evenly;
     align-items: center;
     height: 350px;
+    position: relative;
 }
 .prof-img-wr {
     width: 150px;
     height: 150px;
-    border-radius: 75px;
+    border-radius: 50%;
     background-image: url('/assets/profilepic.jpg');
     border: solid 3px;
 }
@@ -35,7 +35,7 @@
     text-transform: uppercase;
 }
 .abt-me-desc {
-    width: 550px;
+    width: 90%;
     text-align: center;
 }
 .cont-img {
@@ -89,23 +89,34 @@
     left: 100%;
     margin-left: 15px;
 }
+.edu-exp-cont {
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.edu-ele {
+    padding: 5px 0;
+}
+.edu-exp-incont {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+.item-cont {
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+.item-desc {
+    padding: 5px;
+    flex: 4;
+}
+.header {
+    text-transform: uppercase;
+}
 @media screen and (max-width: 600px) {
     .name-cls {
         font-size: 20px;
-    }
-    .abt-me-desc {
-        width: inherit;
-    }
-}
-@media screen and (max-width: 400px) {
-    .prof-img-wr {
-        width: 100px;
-        height: 100px;
-        border-radius: 50px;
-        border: solid 1px;
-    }
-    .banner {
-        height: 47%;
     }
     .contac-body {
         flex-direction: column;
@@ -113,5 +124,19 @@
     }
     .cont-ele {
         flex-direction: row;
+    }
+    .edu-exp-cont {
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 400px) {
+    .prof-img-wr {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: solid 1px;
+    }
+    .abt-wr {
+        height: 250px;
     }
 }
