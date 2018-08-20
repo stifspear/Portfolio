@@ -7,9 +7,11 @@
 }
 
 .aboutme-cont {
+    align-items: center;
+    width: 80%;
 }
 .banner {
-    width: 100%;
+    width: 300vh;
     height: 55%;
     position: absolute;
     background: linear-gradient(#fbc2eb,#a6c1ee);
@@ -21,6 +23,7 @@
     align-items: center;
     height: 350px;
     position: relative;
+    width: 100%;
 }
 .prof-img-wr {
     width: 150px;
@@ -35,7 +38,7 @@
     text-transform: uppercase;
 }
 .abt-me-desc {
-    width: 90%;
+    width: 100%;
     text-align: center;
 }
 .cont-img {
@@ -113,6 +116,9 @@
 }
 .header {
     text-transform: uppercase;
+}
+.slider-cont {
+    width: 100%;
 }
 @media screen and (max-width: 600px) {
     .name-cls {

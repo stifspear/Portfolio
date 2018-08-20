@@ -2,59 +2,56 @@
     <div class="abt-wr flex-col">
         <div class="banner"></div>
         <div class="name-blk">
-            <p class="name-cls">Stif Spear Subba</p>
-            <p class="abt-me-desc">Software Developer</p>
+            <p class="name-cls">{{dataModel.fullName}}</p>
+            <p class="abt-me-desc">{{dataModel.title}}</p>
         </div>
         <div class="prof-img-wr img-div">
         </div>
-        <p class="abt-me-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitatio</p>
+        <p class="abt-me-desc">{{dataModel.aboutMe}}</p>
     </div>
     <div class="contac-wrapper flex-col">
-        <p class="cont-header">
-            <span>Contact Details</span>
-        </p>
+        <p class="cont-header">Contact Details</p>
         <div class="contac-body flex-row">
-            <div class="cont-ele flex-col">
-                <div class="img-div home-img cont-img"></div>
-                <p class="cont-det">Hyderabad, India</p>
-            </div>
-            <div class="cont-ele flex-col">
-                <div class="img-div phone-img cont-img"></div>
-                <p class="cont-det">+91 7536993270</p>
-            </div>
-            <div class="cont-ele flex-col">
-                <div class="img-div email-img cont-img"></div>
-                <p class="cont-det">stif_spear123@yahoo.com</p>
+            <div class="cont-ele flex-col" *ngFor="let ele of contactDetails">
+                <div class="img-div cont-img" [ngClass]="[ele.class]"></div>
+                <p class="cont-det">{{ele.data}}</p>
             </div>
         </div>
     </div>
     <div class="edu-exp-cont flex-row">
         <div class="edu-exp-incont flex-col">
             <header>Education</header>
-            <p class="edu-ele">College Name Some I read</p>
-            <p class="edu-ele">College Name Some I read</p>
-            <p class="edu-ele">College Name Some I read</p>
+            <p *ngFor="let ele of education" class="edu-ele">{{ele}}</p>
         </div>
         <div class="edu-exp-incont flex-col">
             <header>Skills</header>
-            <p class="edu-ele">Skill 1</p>
-            <p class="edu-ele">Skill 2</p>
-            <p class="edu-ele">skill 3</p>
+            <p *ngFor="let ele of skills" class="edu-ele">{{ele}}</p>
         </div>
     </div>
-    <div *ngFor="let section of getKeys(dataObj)">
-        <header class="header">{{section}}</header>
+    <div class="slider-cont">
+        <header class="header">Experiences</header>
         <div class="flex-row">
             <div class="item-cont flex-col">
-                <div class="item-ele" *ngFor="let value of getKeys(dataObj[section])" (click)="updateDesc(section, value)">
-                    {{value}}
+                <div class="item-ele" *ngFor="let value of experiences" (click)="updateValue('exp', value.desc)">
+                    {{value.companyName}}
                 </div>
             </div>
             <p class="item-desc">
-                {{dataObj[section][selectedValues[section]]}}
+                {{selectedValues.exp}}
             </p>
         </div>
     </div>
-
+    <div class="slider-cont">
+        <header class="header">Projects</header>
+        <div class="flex-row">
+            <div class="item-cont flex-col">
+                <div class="item-ele" *ngFor="let value of projects" (click)="updateValue('pro', value.desc)">
+                    {{value.projectName}}
+                </div>
+            </div>
+            <p class="item-desc">
+                {{selectedValues.pro}}
+            </p>
+        </div>
+    </div>
 </div>
