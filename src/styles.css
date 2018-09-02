@@ -4,6 +4,10 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+@font-face {
+    font-family: "Simplifica";
+    src: url(/assets/Fonts/Simplifica.ttf);
+}
 p {
     margin: 0;
 }
@@ -11,4 +15,6 @@ html, body {
     margin: 0;
     width: 100%;
     height: 100%;
+    font-family: 'Simplifica';
+    background-color: rgb(236, 232, 232);
 }
