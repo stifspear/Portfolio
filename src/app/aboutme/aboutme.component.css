@@ -42,12 +42,15 @@
     font-size: 6vw;
     font-weight: bold;
     color: white; 
-    text-shadow: 4px 2px black;
     z-index: 1000;
 }
 .name {
     display: inline-block;
-    color: #ef914a;
+    color: #F1828D;
+}
+.position {
+    margin-top: 5%;
+    font-size: 5vw;
 }
 .abt-me-desc {
     width: 100%;
