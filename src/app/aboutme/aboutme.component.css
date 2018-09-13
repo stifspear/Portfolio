@@ -29,6 +29,7 @@
     position: relative;
     width: 100%;
     overflow: hidden;
+    background-color: #568EA6;
 }
 .prof-img-wr {
     width: 150px;
@@ -39,7 +40,7 @@
 }
 .name-blk {    
     text-align: center;
-    font-size: 6vw;
+    font-size: 6vh;
     font-weight: bold;
     color: white; 
     z-index: 1000;
@@ -47,10 +48,10 @@
 .name {
     display: inline-block;
     color: #F1828D;
+    font-size: 10vh;
 }
 .position {
-    margin-top: 5%;
-    font-size: 5vw;
+    margin-top: 3%;
 }
 .abt-me-desc {
     width: 100%;
