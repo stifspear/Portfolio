@@ -55,6 +55,13 @@
 }
 .abt-me-desc {
     width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 200px;
+}
+.abt-me-desc-inner {
+    width: 80%;
     text-align: center;
 }
 .cont-img {
@@ -150,6 +157,9 @@
     }
     .edu-exp-cont {
         flex-direction: column;
+    }
+    .abt-me-desc {
+        height: 100px;
     }
 }
 @media screen and (max-width: 400px) {

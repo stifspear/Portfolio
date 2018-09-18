@@ -1,9 +1,8 @@
 export class DataModel {
     static fullName = 'Stif Spear Subba';
     static title = 'Software Developer';
-    static aboutMe = 'Nobody likes manual jobs, including myself. Always finding' +
-    'ways to recude manual work so that I get time to work on the thinks I' +
-    'love, listening to music, learning something new or playing games or football.';
+    static aboutMe = 'I am currently working at Amazon as Programmer Analyst. I have prior working' +
+    ' experience at mroads. I like to move to new places. Football, Quora, 9GAG, or trying something new in my free time';
     static contactDetails: Object = [
         {
             'data': 'Hyderabad, India',
