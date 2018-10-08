@@ -44,4 +44,10 @@ export class AboutmeComponent implements OnInit {
     return Object.keys(obj);
   }
 
+  clearSelection(event: any) {
+    console.log('stif');
+    event.preventDefault();
+    console.log(event);
+  }
+
 }
