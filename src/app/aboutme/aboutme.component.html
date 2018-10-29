@@ -21,41 +21,10 @@
                 <p class="cont-det">{{ele.data}}</p>
             </div>
         </div>
-    </div>
-    <div class="edu-exp-cont flex-row">
-        <div class="edu-exp-incont flex-col">
-            <header>Education</header>
-            <p *ngFor="let ele of education" class="edu-ele">{{ele}}</p>
-        </div>
-        <div class="edu-exp-incont flex-col">
-            <header>Skills</header>
-            <p *ngFor="let ele of skills" class="edu-ele">{{ele}}</p>
-        </div>
-    </div>
-    <div class="slider-cont">
-        <header class="header">Experiences</header>
-        <div class="flex-row">
-            <div class="item-cont flex-col">
-                <div class="item-ele" *ngFor="let value of experiences" (click)="updateValue('exp', value.desc)">
-                    {{value.companyName}}
-                </div>
-            </div>
-            <p class="item-desc">
-                {{selectedValues.exp}}
-            </p>
-        </div>
-    </div>
-    <div class="slider-cont">
-        <header class="header">Projects mod</header>
-        <div class="flex-row">
-            <div class="item-cont flex-col">
-                <div class="item-ele" *ngFor="let value of projects" (click)="updateValue('pro', value.desc)">
-                    {{value.projectName}}
-                </div>
-            </div>
-            <p class="item-desc">
-                {{selectedValues.pro}}
-            </p>
-        </div>
     </div> -->
+    <div class="exp-cont">
+        <div class="exp-pro" *ngFor="let project of projects">
+            <header class="project-header">{{project.projectName}}</header>
+        </div>
+    </div>
 </div>
