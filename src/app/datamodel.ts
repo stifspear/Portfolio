@@ -1,6 +1,6 @@
 export class DataModel {
     static fullName = 'Stif Spear Subba';
-    static title = 'Software Developer';
+    static title = 'Software Developer based at India';
     static aboutMe = 'I am Stif Spear Subba. I am currently working at Amazon as Programmer Analyst. I have prior working' +
     ' experience at a startup m. I like to move to new places. Football, Quora, 9GAG, or trying something new in my free time';
     static contactDetails: Object = [
