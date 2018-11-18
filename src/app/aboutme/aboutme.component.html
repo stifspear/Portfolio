@@ -1,6 +1,6 @@
 <div class="aboutme-cont flex-col">
     <header class="header">
-        <div class="flex-row header-cont">
+        <div class="flex-row container">
             <div class="left-cont">
                 <div class="left-name">stifspear</div>
             </div>
@@ -16,21 +16,25 @@
             <p class="under-prominent-name">{{dataModel.title}}</p>
         </div>
     </div>
-    <div class="fullpage flex-row">
-        <div class="my-img-container flex-row">
-            <div class="img-div my-pic"></div>
-        </div>
-        <section class="abt-me-desc-section">
-            <p class="abt-me-desc-inner">{{dataModel.aboutMe}}</p>
-        </section>
-    </div>
-    <div class="exp-cont">
-        <div class="exp-pro" *ngFor="let project of projects">
-            <header class="project-header">{{project.projectName}}</header>
+    <div class="abt-me-container">
+        <div class="section-heading"><p class="heading-text">About me</p></div>
+        <div class="container abt-me-inner-cont flex-row">
+            <div class="my-img-container flex-row">
+                <div class="img-div my-pic"></div>
+            </div>
+            <div class="abt-me-desc-section">
+                <p class="abt-me-desc-inner">{{dataModel.aboutMe}}</p>
+            </div>
         </div>
     </div>
-    <div class="contact-me-container">
-        <div class="contact-inner-cont flex-col">
+    <div class="works-container">
+        <div class="section-heading"><p class="heading-text">Works</p></div>
+        <div class="container exp-cont flex-row">
+            <app-project *ngFor="let project of projects" [project]="project.projectName"></app-project>
+        </div>
+    </div>
+    <div class=" footer contact-me-container">
+        <div class="contact-inner-cont flex-col container">
             <h4>Contact Me</h4>
             <div class="flex-row contact-list ">
                 <div class="flex-col icon_cont">

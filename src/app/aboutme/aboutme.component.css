@@ -19,11 +19,11 @@
     z-index: 10000;
     background-color: #232323;
 }
-.header-cont {
+.container {
     max-width: 1400px;
     padding: 0 40px;
-    align-items: center;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 .right-cont {
     margin-left: auto;
@@ -43,7 +43,6 @@
 }
 .resume:hover {
     background: linear-gradient(-180deg, #3db96d 0%, #1b904e 100%) !important;
-
 }
 .left-name {
     padding: 20px;
@@ -60,8 +59,8 @@
     transform: scale(1.1);
     z-index: 1;
 }
-.fullpage {
-    height: 100vh;
+.abt-me-inner-cont {
+    height: 90vh;
     width: 100%;
     justify-content: space-evenly;
     align-items: center;
@@ -100,7 +99,7 @@
     color: #adb7be;
 }
 .abt-me-desc-inner {
-    width: 80%;
+    padding: 0 20px;
     text-align: center;
 }
 .cont-img {
@@ -197,20 +196,11 @@
 }
 .exp-cont {
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 200px);
-    grid-template-rows: 200px;
-    grid-gap: 5px;
     align-content: center;
-    justify-content: center;
     box-sizing: border-box;
     width: 100%;
-    height: 100vh;
-}
-.exp-pro {
-    border: solid black 0.5px;
-    width: 100%;
-    height: 100%;
+    padding-top: 30px;
+    flex-wrap: wrap;
 }
 .project-header {
     text-align: center;
@@ -245,32 +235,26 @@
 .text_below_text {
     font-size: 10px;
 }
-@media screen and (max-width: 600px) {
-    .name-blk {
-        text-shadow: 2px 1px black;
-    }
-    .contac-body {
-        flex-direction: column;
-        height: 100px;
-    }
-    .cont-ele {
-        flex-direction: row;
-    }
-    .edu-exp-cont {
-        flex-direction: column;
-    }
-    .abt-me-desc {
-        height: 100px;
-    }
+.abt-me-container, .works-container, .contact-me-container {
+    width: 100%;
 }
-@media screen and (max-width: 400px) {
-    .prof-img-wr {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        border: solid 1px;
-    }
+.abt-me-container,.works-container > h3 {
+    padding-top: 10px;
+}
+.section-heading {
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+}
+.heading-text {
+    display: inline-block;
+    border-bottom: solid 1.5px #2f8be6;
+}
+@media screen and (max-width: 500px) {
     .abt-wr {
         height: 250px;
+    }
+    .abt-me-inner-cont {
+        flex-direction: column !important;
     }
 }
