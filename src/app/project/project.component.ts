@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-project',
@@ -7,10 +8,16 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ProjectComponent implements OnInit {
 
-  @Input() project: string;
-  constructor() { }
+  @Input() project: any;
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  clicked() {
+    this.router.navigate(['/project-overview'], {
+      queryParams: { id: this.project.id }
+    });
   }
 
 }

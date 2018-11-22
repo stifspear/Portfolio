@@ -1,3 +1,9 @@
-<div class="exp-pro">
-  <header class="project-header">{{project}}</header>
+<div class="card">
+  <div class="card-wrapper">
+    <div class="img-div exp-pro flex-row" (click)="clicked()" [ngStyle]="{'background': 'url(' + project.tileBackground + ')'}">
+    </div>
+    <div class="card-content">
+      <a class="card-title">{{project.projectName}}</a>
+    </div>
+  </div>
 </div>

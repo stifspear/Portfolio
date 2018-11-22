@@ -1,7 +1,64 @@
+.card {
+    width: 300px;
+}
+.card-wrapper {
+    margin: 0 10px 30px;
+}
 .exp-pro {
     border: solid black 0.5px;
-    width: 300px;
-    height: 210px;
-    margin: 0 10px 30px;
     border-radius: 5px;
+    height: 210px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.exp-pro:hover {
+    opacity: 0.5;
+}
+.project-header {
+    font-weight: 600;
+    color: black;
+    text-align: center;
+}
+.card-content {
+    padding: 10px 0 0 0;
+}
+.card-title {
+    font-weight: 600px;
+    line-height: 27px;
+    font-weight: 600;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 214px;
+    font-size: 13px;
+    cursor: pointer;
+}
+.exp-pro::before {
+    background-image: url('/assets/eye.svg');
+    display: inline-block;
+    width: 30px; 
+    height: 30px;
+    content:"";
+    display: none;
+}
+.exp-pro:hover::before {
+    display: block;
+}
+.project-cont {
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.project-cont-wrapper {
+    padding: 5px;
+}
+.header {
+    padding: 10px 0;
+}
+.project-info-cont {
+
 }

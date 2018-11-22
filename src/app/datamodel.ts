@@ -45,30 +45,38 @@ export class DataModel {
     ];
     static projects: Object = [
         {
+            'id': '0',
             'projectName': 'Project 1',
-            'desc': 'some project i worked on other than work'
+            'desc': 'some project i worked on other than work',
+            'tileBackground': '/assets/panna-interview.png'
         },
         {
+            'id': '1',
             'projectName': 'Project 2',
             'desc': 'some project i worked on other than school'
         },
         {
+            'id': '2',
             'projectName': 'Project 2',
             'desc': 'some project i worked on other than school'
         },
         {
+            'id': '3',
             'projectName': 'Project 2',
             'desc': 'some project i worked on other than school'
         },
         {
+            'id': '4',
             'projectName': 'Project 2',
             'desc': 'some project i worked on other than school'
         },
         {
+            'id': '5',
             'projectName': 'Project 2',
             'desc': 'some project i worked on other than school'
         },
         {
+            'id': '6',
             'projectName': 'Project 2',
             'desc': 'some project i worked on other than school'
         }

@@ -1,10 +1,4 @@
-.flex-col {
-    display: flex;
-    flex-direction: column;
-}
-.flex-row {
-    display: flex;
-}
+
 .aboutme-cont {
     align-items: center;
     width: 100vw;
