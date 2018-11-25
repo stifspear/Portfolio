@@ -1,18 +1,43 @@
-<div class="project-cont flex-row">
-  <div class=" project-cont-wrapper">
+<div class="back-container" (click)="redirectToHome()">
+  <svg viewBox="0 0 512 512"><path class="exit" d="M433.5 96H167.2c-12.2 0-21.8 6.2-28.2 15.6L43 256l96 144.2c6.4 9.4 16 15.8 28.2 15.8h266.2c19.5 0 35.5-16 35.5-35.6V131.6C469 112 453 96 433.5 96zm-53.3 223.8l-25 25.1-63.7-63.8-63.7 63.8-25-25.1 63.7-63.8-63.7-63.8 25-25.1 63.7 63.8 63.7-63.8 25 25.1-63.7 63.8 63.7 63.8z"/></svg>
+</div>
+<div class="project-cont flex-col">
+  <div class="header-overview-wrapper header-wrapper">
     <div class="header">
       <h3 class="project-header">{{project.projectName}}</h3>
     </div>
-    <div class="project-screens-cont">
-      <div class="project-screens">
-        <img src="/assets/hillgreen.jpg">
+  </div>
+  <div class="project-screens-cont">
+    <div class="project-screens-wrapper flex-row">
+      <div class="arrow-cont-disabled arrow-cont-per flex-row" [ngClass]="{'arrow-cont': project.screens.length > 1}" (click)="showLeft()">
+        <div class="arrow-img">
+          <svg viewBox="0 0 512 512">
+              <path class="arrow-svg-left" d="M320 128L192 256l128 128z"/>
+          </svg>
+        </div>
+      </div>
+      <div class="image-wrapper">
+        <img class="project-screenshot" src="{{project.screens[pictureIndex]}}">
+      </div>
+      <div class="arrow-cont-disabled arrow-cont-per flex-row" [ngClass]="{'arrow-cont': project.screens.length > 1}" (click)="showRight()">
+        <div class="arrow-img">
+          <svg viewBox="0 0 512 512">
+              <path class="arrow-svg-right" d="M192 128l128 128-128 128z"/>
+          </svg>
+        </div>
       </div>
     </div>
-    <div class="project-overview">
-      <div class="project-overview-wrapper">
-        <h3>Overview</h3>
-        <p>{{ project.desc }}</p>
+    <div class="carousel-pointer-cont">
+      <div class="carousel-pointer-wrapper" *ngFor="let i of project.screens;let ii=index">
+        <div class="carousel-pointer" [ngStyle]="{'background-color': (ii==pictureIndex) ? 'white' : ''}"></div>
       </div>
     </div>
   </div>
+  <div class="header-overview-wrapper project-overview">
+    <div class="project-overview-wrapper">
+      <h3>Overview</h3>
+      <p>{{ project.desc }}</p>
+    </div>
+  </div>
 </div>
+  

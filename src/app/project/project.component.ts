@@ -15,9 +15,7 @@ export class ProjectComponent implements OnInit {
   }
 
   clicked() {
-    this.router.navigate(['/project-overview'], {
-      queryParams: { id: this.project.id }
-    });
+    this.router.navigate(['/project-overview', this.project.id]);
   }
 
 }

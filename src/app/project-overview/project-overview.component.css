@@ -1,0 +1,132 @@
+.exit {
+    fill: #ffffff;
+}
+.back-container:hover .exit {
+    fill: red;
+}
+.back-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 45px;
+}
+.project-cont {
+    width: 100%;
+}
+.header-overview-wrapper {
+    margin: 0 auto;
+    max-width: 1000px;
+    box-sizing: border-box;
+    padding: 40px;
+    width: 100%;
+}
+.header-wrapper {
+    border-bottom: solid 1px;
+}
+.project-overview {
+    border-top: solid 1px;
+}
+.project-screens-cont {
+    margin: 0 auto;
+    max-width: 1400px;
+    box-sizing: border-box;
+    padding: 40px;
+}
+img {
+    border: none;
+}
+.image-wrapper {
+    width: 640px;
+    height: 400px;
+    margin: 0 40px;
+}
+.project-screenshot {
+    max-width: 100%;
+    max-height: 100%;
+}
+.project-screens-wrapper {
+    justify-content: center;
+    align-items: center;
+}
+.arrow-cont-per {
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+    background-color: rgba(0,0,0,0.1);
+}
+.arrow-cont {
+    cursor: pointer !important;
+    transition: all 0.1s ease-in-out !important;
+    user-select: none;
+}
+.arrow-cont-disabled {
+    cursor: not-allowed;
+    transition: all 0.1s ease-in-out;
+
+}
+.arrow-cont:hover {
+    box-shadow: 0px 0px 25px 2px black;
+    background-color: rgba(0,0,0,0.2);
+    transform: scale(1.1);
+}
+.arrow-svg-left, .arrow-svg-right {
+    fill: grey;
+}
+.arrow-cont:hover .arrow-svg-left {
+    fill: white;
+}
+.arrow-cont:hover .arrow-svg-right {
+    fill: white;
+}
+.arrow-cont:active {
+    transform: scale(1);
+}
+.arrow-img {
+    width: 24px;
+    height: 24px;
+}
+.carousel-pointer-cont {
+    text-align: center;
+    line-height: 25px;
+}
+.carousel-pointer-wrapper {
+    display: inline-block;
+    padding: 0 3px;
+}
+.carousel-pointer {
+    height: 10px;
+    width: 10px;
+    border-radius: 100%;
+    border: solid 1px;
+}
+.project-overview-wrapper {
+    justify-content: center;
+    align-content: center;
+}
+h3 {
+    text-align: left;
+}
+@media screen and (max-width: 500px) {
+    .arrow-cont {
+        display: none;
+    }
+    .project-screens-cont {
+        padding: 0;
+    }
+    .image-wrapper {
+        margin: 0;
+        width: 100vw;
+        height: auto;
+    }
+    .header-wrapper {
+        border-bottom: none;
+    }
+    .project-overview {
+        border-top: none;
+    }
+    .back-container {
+        width: 35px;
+    }
+}
